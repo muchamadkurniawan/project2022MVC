@@ -20,7 +20,7 @@ public class controller_kasir implements interface_kasir {
             return true;
         } catch (Exception e){
             System.out.println(e);
-            return true;
+            return false;
         }
     }
 

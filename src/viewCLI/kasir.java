@@ -1,16 +1,16 @@
-package view;
+package viewCLI;
 
 import allObject.modelALL;
 import controller.controller_kasir;
 import entity.entity_kasir;
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class kasir {
     public static void view(){
         System.out.println("=== MENU CETAK DATA ===");
+//        controller_kasir obj = new controller_kasir();
+//        ArrayList<entity_kasir> EKasir = obj.read();
         ArrayList<entity_kasir> EKasir = modelALL.controllerKasir.read();
         if (EKasir== null){
             System.out.println("data kosong");
@@ -35,6 +35,8 @@ public class kasir {
             nama = scan.next();
             System.out.print("masukkan password : ");
             pass = scan.next();
+//            controller_kasir obj = new controller_kasir();
+//            obj.create(new entity_kasir(nama, nip, pass));
             boolean err = modelALL.controllerKasir.create(new entity_kasir(nama, nip, pass));
             System.out.println("data berhasil masuk");
         } catch (Exception e) {

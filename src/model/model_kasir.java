@@ -4,10 +4,10 @@ import helper.returnIndexnBool;
 
 import java.util.ArrayList;
 
-public class data_kasir {
+public class model_kasir {
     private ArrayList<entity_kasir> data_kasir;
 
-    public data_kasir()
+    public model_kasir()
     {
         data_kasir = new ArrayList<entity_kasir>();
     }
